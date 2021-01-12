@@ -19,6 +19,4 @@ const onServerError = pipe(logServerError, exitProcess);
 
 const onServerSuccess = () => console.log(`server is listening on port: ${port}`);
 
-app.listen(port)
-    .then(onServerSuccess)
-    .catch(onServerError);
+app.listen(port).then(onServerSuccess).catch(onServerError);
